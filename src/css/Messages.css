@@ -1,0 +1,150 @@
+#messages .messagesContainer {
+  display: grid;
+  grid-template-columns: 2.5fr 7.5fr;
+  column-gap: 2rem;
+  margin-top: 5rem;
+  padding: 0 2rem 0 0;
+}
+#messages .messagesContainer .recentMessages {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#messages .messagesContainer .recentMessages .message {
+  background: white;
+  display: flex;
+  column-gap: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 100ms ease;
+}
+#messages .messagesContainer .recentMessages .message > div:nth-of-type(1) img {
+  background: #D9D9D9;
+  padding: 0.25rem;
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
+#messages .messagesContainer .recentMessages .message div.content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 0.65rem;
+}
+#messages .messagesContainer .recentMessages .message div.content > p {
+  font-weight: bold;
+}
+#messages .messagesContainer .recentMessages .message div.content > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#messages .messagesContainer .recentMessages .message div.content > div p:nth-of-type(1) {
+  font-size: 0.75rem;
+}
+#messages .messagesContainer .recentMessages .message div.content > div p:nth-of-type(2) {
+  font-size: 0.75rem;
+}
+#messages .messagesContainer .recentMessages .message.active {
+  background: #486FD8;
+  color: white;
+  cursor: default;
+}
+#messages .messagesContainer .recentMessages .message:not(.active):hover {
+  background: #6787DF;
+  color: white;
+}
+#messages .messagesContainer .recentMessages .message:not(.active):active {
+  background: #324E97;
+  color: white;
+}
+#messages .messagesContainer .messageCenter {
+  background: white;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 5fr 0.5fr;
+  grid-template-columns: 1fr;
+}
+#messages .messagesContainer .messageCenter .person {
+  margin: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: solid 1px #EFEFEF;
+}
+#messages .messagesContainer .messageCenter .person img {
+  background: #D9D9D9;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+#messages .messagesContainer .messageCenter .date {
+  margin: 0 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+#messages .messagesContainer .messageCenter .chat {
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#messages .messagesContainer .messageCenter .chat .chatItem {
+  align-self: flex-end;
+}
+#messages .messagesContainer .messageCenter .chat .chatItem > div:nth-of-type(1) {
+  background: #EDF1FB;
+  color: #486FD8;
+  width: fit-content;
+  padding: 0.35rem 1.25rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#messages .messagesContainer .messageCenter .chat .chatItem > div:nth-of-type(2) {
+  font-size: 0.7rem;
+  color: #8D939C;
+}
+#messages .messagesContainer .messageCenter .chat .chatItem.received {
+  align-self: flex-start;
+}
+#messages .messagesContainer .messageCenter .chat .chatItem.received > div:nth-of-type(1) {
+  background: #486FD8;
+  color: white;
+  width: fit-content;
+}
+#messages .messagesContainer .messageCenter .compose {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+#messages .messagesContainer .messageCenter .compose form {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  column-gap: 0.75rem;
+}
+#messages .messagesContainer .messageCenter .compose form input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+}
+#messages .messagesContainer .messageCenter .compose form .voice {
+  position: absolute;
+  left: 1rem;
+  top: 0.85rem;
+  padding: 0;
+  background: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+#messages .messagesContainer .messageCenter .compose form .send {
+  padding: 0;
+  background: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+#messages .messagesContainer .messageCenter .compose form .send img {
+  height: 2.5rem;
+  width: auto;
+}
+
+/*# sourceMappingURL=Messages.css.map */

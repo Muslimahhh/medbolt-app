@@ -1,0 +1,444 @@
+@import "colours";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+input{
+    border: solid 1px $input_inactive;
+    padding: 0.45rem 0.75rem 0.45rem 3rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+input::placeholder{
+    color: $placeholder;
+    font-size: 1rem;
+}
+
+input:focus{
+    border: solid 1.25px $input_active !important;
+    outline: none;
+}
+
+textarea{
+    border: solid 1px $input_inactive;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+textarea::placeholder{
+    color: $placeholder;
+    font-size: 1.1rem;
+}
+
+textarea:focus{
+    border: solid 1.25px $input_active !important;
+    outline: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    align-items: center;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    background: white;
+
+
+    > div{
+        display: flex;
+        column-gap: 8rem;
+    }
+
+    .search{
+        padding: 0;
+        position: relative;
+
+        i{
+            position: absolute;
+            left: 1rem;
+            top: 0.6rem;
+            color: $placeholder;
+        }
+
+        i:hover{
+            color: $input_active;
+        }
+
+        i:active{
+            color: $blue_clicked;
+        }
+    }
+
+    .code-container{
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+
+        .code{
+            border: solid 1px $input_inactive;
+            padding: 0.25rem;
+        }
+    }
+
+    .admin-actions{
+        display: flex;
+        column-gap: 1.5rem;
+        align-items: center;
+
+        > div{
+            cursor: pointer;
+        }
+
+        img{
+            width: 1.45rem;
+        }
+
+        .user{
+            display: flex;
+            column-gap: 1rem;
+            align-items: center;
+
+            .pfp{
+                padding: 0.1rem 0.25rem;
+                background: $input_inactive;
+                height: fit-content;
+                border-radius: 50%;
+            }
+
+            .info{
+
+                .users_name{
+                    color: $blue_primary;
+                    font-size: 0.95rem;
+                }
+
+                .user_type{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+
+#toolbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: white;
+
+    .tool{
+        display: flex;
+        column-gap: 1rem;
+        align-items: flex-start;
+        padding: 0.25rem 0.5rem 0.25rem 0.75rem;
+        text-decoration: none;
+        color: $input_inactive;
+        background: transparent;
+        border-left: solid 8px transparent;
+        font-weight: bold;
+        border-radius: 0.25rem;
+        
+        p{
+            font-size: 1.2rem;
+        }
+
+        img{
+            width: 1.5rem;
+        }
+    }
+
+    .tool:hover{
+        color: $blue_primary;
+        background: $blue_bg;
+        border-left: solid 8px transparent;
+        font-weight: bold;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+
+    .tool.active{
+        color: $blue_primary;
+        background: $blue_bg;
+        border-left: solid 8px $blue_primary;
+        font-weight: bold;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+
+    .logo{
+        text-align: center;
+        padding: 1rem 0;
+
+        img{
+            width: 11rem;
+            height: auto;
+            text-align: center;
+        }
+    }
+
+    > div.options, div.settings{
+        width: 70%;
+    }
+
+    .options{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        row-gap: 1rem;
+        justify-self: flex-start;
+    }
+
+    .settings{
+        display: flex;
+        margin-top: 6rem;
+        flex-direction: column;
+        row-gap: 1rem;
+        justify-self: flex-end;
+    }
+}
+
+.page{
+    position: relative;
+
+    main{
+        width: 80%;
+        height: 300vh;
+        position: absolute;
+        padding: 6rem 0 5rem 2rem;
+        right: 0;
+        background: $blue_bg;
+
+        h1{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.page.blur{
+
+    nav{
+        filter: brightness(0.75);
+        pointer-events: none;
+    }
+
+    main{
+        filter: brightness(0.75);
+        pointer-events: none;
+    }
+
+    #toolbar{
+        filter: brightness(0.75);
+        pointer-events: none;
+    }
+}
+
+.peopleBox{
+    background: white;
+    font-weight: bold;
+    width: 18rem;
+    padding: 1rem 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    border-radius: 1rem;
+
+    p{
+        font-size: 0.9rem;
+    }
+
+    div{
+        font-size: 2.2rem;
+    }
+}
+
+.rosterItem{
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 1rem 1rem;
+    width: 16rem;
+    height: 6.5rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    .dept{
+        border-bottom: solid 1px $input_inactive;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .specialists{
+        text-align: left;
+        padding: 0 1rem;
+        position: absolute;
+    }
+
+    span{
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        border-radius: 0.35rem;
+        padding: 0.15rem 0.3rem;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+}
+
+.rosterItem.blue{
+    background: $blue_bg;
+
+    span{
+        color: $blue_bold;
+        background: $blue_text_bg;
+    }
+}
+
+.rosterItem.purple{
+    background: $purple_bg;
+
+    span{
+        color: $purple_bold;
+        background: $purple_text_bg;
+    }
+}
+
+.rosterItem.green{
+    background: $green_bg;
+
+    span{
+        color: $green_bold;
+        background: $green_text_bg;
+    }
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+}
+
+.blueBtn{
+                    
+    button{
+        background: $input_active;
+        padding: 0.25rem 1.5rem;
+        border-radius: 0.35rem;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    button:hover{
+        background: $blue_hover;
+        color: white
+    }
+
+    button:active{
+        background: $blue_clicked;
+        color: white
+    }
+}
+
+.blueBtn{
+    background: $input_active;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.35rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    height: fit-content;
+}
+
+.blueBtn:hover{
+    background: $blue_hover;
+    color: white
+}
+
+.blueBtn:active{
+    background: $blue_clicked;
+    color: white
+}
+
+.grayBtn{
+    @extend .blueBtn;
+    padding: 0.25rem 1rem;
+    background: $input_inactive;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 0.9rem;
+    height: fit-content;
+
+    img{
+        width: 0.65rem;
+    }
+}
+
+.grayBtn:hover{
+    background: lighten($input_inactive, 5)
+}
+
+.grayBtn:active{
+    background: darken($input_inactive, 10)
+}
+
+.orangeBtn{
+    @extend .grayBtn;
+    display: default;
+    background: $orange_btn;
+}
+
+.orangeBtn:hover{
+    background: lighten($orange_btn, 5);
+}
+
+.orangeBtn:active{
+    background: darken($orange_btn, 10);
+}
+
+.whiteBtn{
+    @extend .blueBtn;
+    background: white;
+    border: solid 1px white;
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    
+    img{
+        width: 1rem;
+    }
+}
+
+.whiteBtn:hover{
+    background: darken(white,  5);
+    color: black;
+    border-color: black;
+}
+
+.whiteBtn:active{
+    background: darken(white,  10);
+    color: black;
+    border-color: black;
+}

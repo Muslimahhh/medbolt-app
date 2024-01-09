@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+input {
+  border: solid 1px #C3C0C0;
+  padding: 0.45rem 0.75rem 0.45rem 3rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #8D939C;
+  font-size: 1rem;
+}
+
+input:focus {
+  border: solid 1.25px #486FD8 !important;
+  outline: none;
+}
+
+textarea {
+  border: solid 1px #C3C0C0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+textarea::placeholder {
+  color: #8D939C;
+  font-size: 1.1rem;
+}
+
+textarea:focus {
+  border: solid 1.25px #486FD8 !important;
+  outline: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  align-items: center;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  background: white;
+}
+nav > div {
+  display: flex;
+  column-gap: 8rem;
+}
+nav .search {
+  padding: 0;
+  position: relative;
+}
+nav .search i {
+  position: absolute;
+  left: 1rem;
+  top: 0.6rem;
+  color: #8D939C;
+}
+nav .search i:hover {
+  color: #486FD8;
+}
+nav .search i:active {
+  color: #324E97;
+}
+nav .code-container {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+nav .code-container .code {
+  border: solid 1px #C3C0C0;
+  padding: 0.25rem;
+}
+nav .admin-actions {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+}
+nav .admin-actions > div {
+  cursor: pointer;
+}
+nav .admin-actions img {
+  width: 1.45rem;
+}
+nav .admin-actions .user {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+nav .admin-actions .user .pfp {
+  padding: 0.1rem 0.25rem;
+  background: #C3C0C0;
+  height: fit-content;
+  border-radius: 50%;
+}
+nav .admin-actions .user .info .users_name {
+  color: #486FD8;
+  font-size: 0.95rem;
+}
+nav .admin-actions .user .info .user_type {
+  font-size: 0.9rem;
+}
+
+#toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: white;
+}
+#toolbar .tool {
+  display: flex;
+  column-gap: 1rem;
+  align-items: flex-start;
+  padding: 0.25rem 0.5rem 0.25rem 0.75rem;
+  text-decoration: none;
+  color: #C3C0C0;
+  background: transparent;
+  border-left: solid 8px transparent;
+  font-weight: bold;
+  border-radius: 0.25rem;
+}
+#toolbar .tool p {
+  font-size: 1.2rem;
+}
+#toolbar .tool img {
+  width: 1.5rem;
+}
+#toolbar .tool:hover {
+  color: #486FD8;
+  background: #EDF1FB;
+  border-left: solid 8px transparent;
+  font-weight: bold;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+#toolbar .tool.active {
+  color: #486FD8;
+  background: #EDF1FB;
+  border-left: solid 8px #486FD8;
+  font-weight: bold;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+#toolbar .logo {
+  text-align: center;
+  padding: 1rem 0;
+}
+#toolbar .logo img {
+  width: 11rem;
+  height: auto;
+  text-align: center;
+}
+#toolbar > div.options, #toolbar div.settings {
+  width: 70%;
+}
+#toolbar .options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  row-gap: 1rem;
+  justify-self: flex-start;
+}
+#toolbar .settings {
+  display: flex;
+  margin-top: 6rem;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-self: flex-end;
+}
+
+.page {
+  position: relative;
+}
+.page main {
+  width: 80%;
+  height: 300vh;
+  position: absolute;
+  padding: 6rem 0 5rem 2rem;
+  right: 0;
+  background: #EDF1FB;
+}
+.page main h1 {
+  font-size: 1.8rem;
+}
+
+.page.blur nav {
+  filter: brightness(0.75);
+  pointer-events: none;
+}
+.page.blur main {
+  filter: brightness(0.75);
+  pointer-events: none;
+}
+.page.blur #toolbar {
+  filter: brightness(0.75);
+  pointer-events: none;
+}
+
+.peopleBox {
+  background: white;
+  font-weight: bold;
+  width: 18rem;
+  padding: 1rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  border-radius: 1rem;
+}
+.peopleBox p {
+  font-size: 0.9rem;
+}
+.peopleBox div {
+  font-size: 2.2rem;
+}
+
+.rosterItem {
+  border-radius: 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+  width: 16rem;
+  height: 6.5rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.rosterItem .dept {
+  border-bottom: solid 1px #C3C0C0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.rosterItem .specialists {
+  text-align: left;
+  padding: 0 1rem;
+  position: absolute;
+}
+.rosterItem span {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 0.35rem;
+  padding: 0.15rem 0.3rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.rosterItem.blue {
+  background: #EDF1FB;
+}
+.rosterItem.blue span {
+  color: #486FD8;
+  background: #B4C4EF;
+}
+
+.rosterItem.purple {
+  background: #F6EDFB;
+}
+.rosterItem.purple span {
+  color: #9238BC;
+  background: #D9B4EF;
+}
+
+.rosterItem.green {
+  background: #DBF1DB;
+}
+.rosterItem.green span {
+  color: #008000;
+  background: #8FDA8F;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+}
+
+.blueBtn button, .whiteBtn button, .grayBtn button, .orangeBtn button {
+  background: #486FD8;
+  padding: 0.25rem 1.5rem;
+  border-radius: 0.35rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.blueBtn button:hover, .whiteBtn button:hover, .grayBtn button:hover, .orangeBtn button:hover {
+  background: #6787DF;
+  color: white;
+}
+.blueBtn button:active, .whiteBtn button:active, .grayBtn button:active, .orangeBtn button:active {
+  background: #324E97;
+  color: white;
+}
+
+.blueBtn, .whiteBtn, .grayBtn, .orangeBtn {
+  background: #486FD8;
+  padding: 0.25rem 1.5rem;
+  border-radius: 0.35rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  height: fit-content;
+}
+
+.blueBtn:hover, .whiteBtn:hover, .grayBtn:hover, .orangeBtn:hover {
+  background: #6787DF;
+  color: white;
+}
+
+.blueBtn:active, .whiteBtn:active, .grayBtn:active, .orangeBtn:active {
+  background: #324E97;
+  color: white;
+}
+
+.grayBtn, .orangeBtn {
+  padding: 0.25rem 1rem;
+  background: #C3C0C0;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: 0.9rem;
+  height: fit-content;
+}
+.grayBtn img, .orangeBtn img {
+  width: 0.65rem;
+}
+
+.grayBtn:hover, .orangeBtn:hover {
+  background: #cfcdcd;
+}
+
+.grayBtn:active, .orangeBtn:active {
+  background: #aaa6a6;
+}
+
+.orangeBtn {
+  display: default;
+  background: #FBAC36;
+}
+
+.orangeBtn:hover {
+  background: #fbb64f;
+}
+
+.orangeBtn:active {
+  background: #f99705;
+}
+
+.whiteBtn {
+  background: white;
+  border: solid 1px white;
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.whiteBtn img {
+  width: 1rem;
+}
+
+.whiteBtn:hover {
+  background: #f2f2f2;
+  color: black;
+  border-color: black;
+}
+
+.whiteBtn:active {
+  background: #e6e6e6;
+  color: black;
+  border-color: black;
+}
+
+/*# sourceMappingURL=App.css.map */

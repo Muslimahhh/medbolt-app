@@ -1,0 +1,509 @@
+#admin .peopleStats {
+  display: flex;
+  column-gap: 2rem;
+  margin-top: 1.5rem;
+}
+#admin #roster {
+  width: fit-content;
+  background: white;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+}
+#admin #roster table {
+  border-collapse: collapse;
+}
+#admin #roster table thead th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+#admin #roster table .name {
+  font-size: 1.25rem;
+}
+#admin #roster table tr {
+  border-collapse: collapse;
+}
+#admin #roster table tr td {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border: solid 1px #EDF1FB;
+}
+#admin #roster table tr td .shift {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#admin #roster table tr td .time {
+  color: #111F30;
+  font-size: 0.85rem;
+}
+#admin #roster label {
+  margin-right: 1rem;
+  font-weight: normal;
+  color: #18181B;
+}
+#admin #roster input[type=date] {
+  border-radius: 0.25rem;
+  border: solid 1px #DBDBDB;
+  padding: 0.15rem 0 0.15rem 1rem;
+}
+#admin #roster input[type=date]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../assets/icons/angle-down.svg") no-repeat 0 7.5px;
+  background-size: 12px;
+  border-width: thin;
+  color: transparent;
+}
+#admin #events {
+  background: white;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  width: 35rem;
+  max-width: 35rem;
+}
+#admin #events h4.name {
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+}
+#admin #events #eventsNav {
+  background: #486FD8;
+}
+#admin #events #eventsNav div {
+  display: flex;
+  padding: 0.8rem 1.5rem 0 1.5rem;
+}
+#admin #events #eventsNav div > div {
+  padding: 0.25rem 2rem 0.5rem 2rem;
+  border-top-left-radius: 0.15rem;
+  border-top-right-radius: 0.15rem;
+  color: white;
+  cursor: pointer;
+}
+#admin #events #eventsNav div > div.active {
+  background: white;
+  color: black;
+}
+#admin #events #eventsNav div > div:hover {
+  background: #6787DF;
+  color: white;
+}
+#admin #events #eventsNav div > div:active {
+  padding: 0.25rem 2rem;
+  background: #324E97;
+  color: white;
+}
+#admin #events .events {
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+}
+#admin #events .events .reminders {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+#admin #events .events .reminders .reminder-item {
+  display: flex;
+  max-width: 25rem !important;
+  column-gap: 1rem;
+}
+#admin #events .events .reminders .reminder-item .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#admin #events .events .reminders .reminder-item .icon img {
+  width: 0.65rem;
+  height: auto;
+}
+#admin #events .events .reminders .reminder-item .icon .line {
+  margin-top: 0.05rem;
+  width: 0;
+  border: solid 1px black;
+  border-right: none;
+  height: 100%;
+  background: black;
+  max-height: fit-content;
+}
+#admin #events .events .reminders .reminder-item .content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+#admin #events .events .reminders .reminder-item .content .date {
+  font-weight: bold;
+}
+#admin #events .events .reminders .reminder-item .content .reminder {
+  border: solid 1.5px #486FD8;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 1rem;
+}
+#admin #events .events .notes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding-right: 2rem;
+}
+#admin #events .events .notes .note {
+  border: solid 1px #C3C0C0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  justify-content: space-between;
+  display: flex;
+}
+#admin #events .events .notes .note > div {
+  height: 100%;
+}
+#admin #events .events .notes.center {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  width: 100%;
+  height: 10rem;
+}
+#admin #events .events .notes.center p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+#admin #events .events .newEvent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: flex-end;
+}
+#admin #events .events .newEvent textarea {
+  width: 100%;
+  resize: none;
+}
+
+#patients button {
+  margin: 1rem 0 4rem 0;
+}
+#patients table {
+  background: white;
+  border-radius: 0.75rem;
+  width: 95%;
+  padding: 0.5rem 2rem 3rem 2rem;
+}
+#patients table tr th {
+  padding: 1rem 1rem 0.5rem 2rem;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#patients table tr td {
+  padding: 1rem 1rem 0.5rem 2rem;
+  border-top: solid 1px #EFEFEF;
+  color: #111F30;
+  text-align: left;
+}
+#patients table tr td:first-of-type {
+  border-left: solid 1px #EFEFEF;
+}
+#patients table tr td:last-of-type {
+  border-right: solid 1px #EFEFEF;
+}
+#patients table tr:last-of-type td {
+  border-bottom: solid 1px #EFEFEF;
+}
+
+#patient .heading {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#patient .heading .blueBtn {
+  font-size: 1.1rem;
+}
+#patient h1 {
+  font-size: 2rem;
+}
+#patient .options {
+  margin-top: 1rem;
+  display: flex;
+  column-gap: 1.5rem;
+}
+#patient .patientNav {
+  display: flex;
+  column-gap: 7rem;
+  margin: 3rem 0 4rem 0;
+}
+#patient .patientNav .patientNavLink {
+  color: #111F30;
+  font-size: 1rem;
+  text-decoration: none;
+}
+#patient .patientNav .patientNavLink.active {
+  text-decoration: underline #486FD8;
+  text-underline-offset: 0.55rem;
+}
+#patient .basic {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  column-gap: 5rem;
+}
+#patient .basic form {
+  display: grid;
+  grid-template-columns: 2.5fr 7.5fr;
+  column-gap: 5rem;
+  background: white;
+  padding: 2rem;
+  width: 90%;
+  border-radius: 1rem;
+}
+#patient .basic form > div:first-of-type {
+  row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#patient .basic form > div:first-of-type h2 {
+  font-size: 1.5rem;
+  width: 100%;
+}
+#patient .basic form > div:first-of-type img {
+  width: 6rem;
+}
+#patient .basic form .patientInput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  color: #111F30;
+}
+#patient .basic form .patientInput input {
+  display: inline-block;
+  margin: 1.2rem auto;
+  border: none;
+  padding: 0;
+  width: 10.5ch;
+  background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/35ch 2px no-repeat;
+  font: 1.2rem "Ubuntu Mono", monospace;
+  letter-spacing: 0.5ch;
+}
+#patient .basic form .patientInput input:focus {
+  border: none !important;
+  outline: none;
+}
+#patient .basic form .patientInput p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+#patient .basic form > div:nth-of-type(2) {
+  display: flex;
+  column-gap: 3rem;
+  flex-wrap: wrap;
+}
+#patient .basic form.noEdits .patientInput input {
+  pointer-events: none;
+}
+#patient .basic button {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#patient .health-data {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-areas: "one two tri foe" "fie six sev foe" "eig 0 0 0";
+  row-gap: 2rem;
+  column-gap: 1rem;
+  justify-content: space-between;
+}
+#patient .health-data > div:nth-of-type(1) {
+  grid-area: one;
+}
+#patient .health-data > div:nth-of-type(2) {
+  grid-area: two;
+}
+#patient .health-data > div:nth-of-type(3) {
+  grid-area: tri;
+}
+#patient .health-data > div:nth-of-type(4) {
+  grid-area: foe;
+}
+#patient .health-data > div:nth-of-type(5) {
+  grid-area: fie;
+}
+#patient .health-data > div:nth-of-type(6) {
+  grid-area: six;
+}
+#patient .health-data > div:nth-of-type(7) {
+  grid-area: sev;
+}
+#patient .health-data > div:nth-of-type(8) {
+  grid-area: eig;
+}
+#patient .health-data .health-data-item {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 0.625rem;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-self: flex-start;
+}
+#patient .health-data .health-data-item h3 {
+  display: flex;
+  font-size: 0.95rem;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+#patient .health-data .health-data-item button {
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  color: #111F30;
+  display: flex;
+  border: none;
+  background: none;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+#patient .health-data .health-data-item button:hover {
+  cursor: pointer;
+}
+#patient .health-data .health-data-item .items {
+  padding-top: 1.5rem;
+  border-top: solid 1px #EFEFEF;
+  color: #111F30;
+}
+#patient .health-data .health-data-item .vitals {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  color: #111F30;
+}
+#patient .health-data .health-data-item .vitals .vital {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+#patient .health-data .health-data-item .vitals .vital > p {
+  font-size: 0.85rem;
+  color: #C3C0C0;
+}
+#patient .health-data .health-data-item .vitals .vital div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+}
+#patient .health-data .health-data-item .vitals .vital div > p:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#patient .health-data .health-data-item .vitals .vital div > p:nth-of-type(2) {
+  font-size: 0.75rem;
+  color: #486FD8;
+  background: #EDF1FB;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.35rem;
+}
+#patient .health-data .health-data-item .vitals .vital:not(:nth-of-type(1)) {
+  padding-top: 1.5rem;
+  border-top: solid 1px #EFEFEF;
+}
+#patient .health-data .health-data-item .diagnoses {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#patient .health-data .health-data-item .diagnoses .diagnosis {
+  color: #111F30;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+#patient .health-data .health-data-item .medication-history, #patient .health-data .health-data-item .medical-conditions, #patient .health-data .health-data-item .family-illnesses, #patient .health-data .health-data-item .allergies {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#patient .health-data .health-data-item .medication-history > div, #patient .health-data .health-data-item .medical-conditions > div, #patient .health-data .health-data-item .family-illnesses > div, #patient .health-data .health-data-item .allergies > div {
+  font-size: 0.9rem;
+}
+#patient .health-data .health-data-item .referrals {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#patient .health-data .health-data-item .referrals .referral {
+  display: flex;
+  row-gap: 0.5rem;
+  flex-direction: column;
+  color: #111F30;
+}
+#patient .health-data .health-data-item .referrals .referral p:nth-of-type(1) {
+  font-size: 0.85rem;
+}
+#patient .health-data .health-data-item .referrals .referral p:nth-of-type(2) {
+  font-size: 0.875rem;
+}
+#patient .health-data .health-data-item .medical-notes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote {
+  border: solid 1px #95ABE8;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote .top {
+  display: flex;
+  column-gap: 1rem;
+  cursor: pointer;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote .top > div {
+  font-size: 0.85rem;
+  color: #111F30;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote .content.show {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote .content.show > div {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: 8fr 2fr;
+  justify-content: space-between;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote .content.show > div p {
+  text-align: justify;
+  font-size: 0.875rem;
+  color: #111F30;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote .content.show > div .short {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote .content {
+  display: none;
+  transition: all ease 100ms;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote.show {
+  padding: 1rem 2rem;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote:hover {
+  border: solid 1px #6787DF;
+}
+#patient .health-data .health-data-item .medical-notes .medicalNote:active {
+  border: solid 1px #324E97;
+}
+
+/*# sourceMappingURL=Pages.css.map */

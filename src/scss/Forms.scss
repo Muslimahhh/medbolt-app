@@ -1,0 +1,159 @@
+@import "colours";
+
+.addData{
+    z-index: 20;
+    width: 50%;
+    max-height: 45rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    overflow-y: auto;
+    transform: translate(-50%, -50%);
+    
+    form{
+        width: 100%;
+        background: white;
+        border: solid 1px $gray_border;
+        padding-bottom: 3rem;
+        border-radius: 1rem;
+
+        > div:first-of-type{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: solid 1px $gray_border;
+            padding: 2rem 3rem 0.5rem 3rem;
+
+            img{
+                cursor: pointer;
+            }
+        }
+
+        .inputCon{
+            border-bottom: solid 1px $gray_border;
+            margin: 2rem 2.5rem 0 3rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            padding-bottom: 1rem;
+    
+            > div{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                label{
+                    color: $black;
+                    font-size: 0.95rem;
+                }
+
+                input{
+                    text-align: right;
+                    width: 9rem;
+                    padding: 0.45rem 0.5rem 0.45rem 0.5rem;
+                }
+
+                input::placeholder{
+                    text-align: right;
+                    color: $input_inactive;
+                    font-size: 0.9rem;
+                }
+
+                input[value=""]::-webkit-datetime-edit{ 
+                    color: transparent; 
+                }
+
+                input:focus::-webkit-datetime-edit{ 
+                    color: #000; 
+                }
+            }
+
+            h2{
+                font-size: 1rem;
+                margin: 0.5rem 0 0.25rem 0;
+            }
+        }
+
+        .btnDiv{
+            margin: 2rem 3rem 0 3rem;
+            display: flex;
+            text-align: right;
+            justify-content: flex-end;
+
+            button{
+                width: fit-content;
+            }
+        }
+    }
+}
+
+.familyIllness{
+
+    form{
+
+        div{
+
+            p{
+                color: $input_active;
+                text-decoration: underline $input_active;
+                text-underline-offset: 0.2rem;
+                padding: 1rem 0 0.5rem 3rem;
+                font-size: 0.85rem;
+                cursor: pointer;
+            }
+        }
+
+        .inputCon{
+            border-bottom: none;
+
+            > div{
+
+                input{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+.diagnosis{
+
+    form{
+
+        .inputCon{
+            border-bottom: none;
+
+            > div{
+
+                input{
+                    text-align: left;
+                }
+
+                input[type="text"]{
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}
+
+.allergy{
+    @extend .familyIllness;
+}
+
+.referralNote{
+    @extend .familyIllness;
+
+    form{
+
+        .inputCon{
+
+            > div{
+
+                input[type="text"]{
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}

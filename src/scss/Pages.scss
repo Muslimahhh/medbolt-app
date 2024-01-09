@@ -1,0 +1,650 @@
+@import "colours";
+
+#admin{
+    
+    .peopleStats{
+        display: flex;
+        column-gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    #roster{
+        width: fit-content;
+        background: white;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+
+        table{
+            border-collapse: collapse;
+
+            thead{
+                
+                th{
+                    padding: 1rem 1.5rem;
+                    text-align: left;
+                }
+            }
+
+            .name{
+                font-size: 1.25rem;
+            }
+
+            tr{
+                border-collapse: collapse;
+
+                td{
+                    padding: 1rem 1.5rem;
+                    text-align: center;
+                    border: solid 1px $blue_bg;
+
+                    .shift{
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        margin-bottom: 1rem;
+                    }
+
+                    .time{
+                        color: $black;
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+
+        label{
+            margin-right: 1rem;
+            font-weight: normal;
+            color: #18181B;
+        }
+
+        input[type="date"]{
+            border-radius: 0.25rem;
+            border: solid 1px #DBDBDB;
+            padding: 0.15rem 0 0.15rem 1rem;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator{
+            color: rgba(0, 0, 0, 0);
+            opacity: 1;
+            display: block;
+            background: url("../assets/icons/angle-down.svg") no-repeat 0 7.5px;
+            background-size: 12px;
+            border-width: thin;
+            color: transparent;
+        }
+    }
+
+    #events{
+        background: white;
+        margin-top: 1.5rem;
+        border-radius: 1rem;
+        width: 35rem;
+        max-width: 35rem;
+
+        h4.name{
+            font-size: 1.25rem;
+            padding: 1rem 1.5rem;
+        }
+
+        #eventsNav{
+            background: $input_active;
+
+            div{
+                display: flex;
+                padding: 0.8rem 1.5rem 0 1.5rem;
+
+                > div{
+                    padding: 0.25rem 2rem 0.5rem 2rem;
+                    border-top-left-radius: 0.15rem;
+                    border-top-right-radius: 0.15rem;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                > div.active{
+                    background: white;
+                    color: black;
+                }
+
+                > div:hover{
+                    background: $blue_hover;
+                    color: white;
+                }
+
+                > div:active{
+                    padding: 0.25rem 2rem;
+                    background: $blue_clicked;
+                    color: white;
+                }
+            }
+        }
+
+        .events{
+            padding: 1.5rem 1.5rem 3rem 1.5rem;
+
+            .reminders{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.25rem;
+
+                .reminder-item{
+                    display: flex;
+                    max-width: 25rem !important;
+                    column-gap: 1rem;
+
+                    .icon{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        img{
+                            width: 0.65rem;
+                            height: auto;
+                        }
+
+                        .line{
+                            margin-top: 0.05rem;
+                            width: 0;
+                            border: solid 1px black;
+                            border-right: none;
+                            height: 100%;
+                            background: black;
+                            max-height: fit-content;
+                        }
+                    }
+
+                    .content{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1.25rem;
+
+                        .date{
+                            font-weight: bold;
+                        }
+                        
+                        .reminder{
+                            border: solid 1.5px $input_active;
+                            padding: 1rem;
+                            margin-bottom: 0.25rem;
+                            border-radius:1rem;
+                        }
+                    }
+                }
+            }
+
+            .notes{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.5rem;
+                padding-right: 2rem;
+
+                .note{
+                    border: solid 1px $input_inactive;
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                    justify-content: space-between;
+                    display: flex;
+
+                    >div{
+                        height: 100%;
+                    }
+                }
+            }
+
+            .notes.center{
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                row-gap: 2rem;
+                width: 100%;
+                height: 10rem;
+
+                p{
+                    font-weight: 400;
+                    font-size: 1.1rem;
+                }
+            }
+
+            .newEvent{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+                align-items: flex-end;
+
+                textarea{
+                    width: 100%;
+                    resize: none;
+                }
+            }
+        }
+    }
+}
+
+#patients{
+
+    button{
+        margin: 1rem 0 4rem 0;
+    }
+
+    table{
+        background: white;
+        border-radius: 0.75rem;
+        width: 95%;
+        padding: 0.5rem 2rem 3rem 2rem;
+
+        tr{
+
+            th{
+                padding: 1rem 1rem 0.5rem 2rem;
+                text-align: left;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+    
+            td{
+                padding: 1rem 1rem 0.5rem 2rem;
+                border-top: solid 1px $gray_border;
+                color: $black;
+                text-align: left;
+            }
+
+            td:first-of-type{
+                border-left: solid 1px $gray_border;
+            }
+
+            td:last-of-type{
+                border-right: solid 1px $gray_border;
+            }
+        }
+
+        tr:last-of-type{
+            
+            td{
+                border-bottom: solid 1px $gray_border;
+            }
+        }
+    }
+}
+
+#patient{
+
+    .heading{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .blueBtn{
+            font-size: 1.1rem;
+        }
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .options{
+        margin-top: 1rem;
+        display: flex;
+        column-gap: 1.5rem;
+    }
+
+    .patientNav{
+        display: flex;
+        column-gap: 7rem;
+        margin: 3rem 0 4rem 0;
+
+        .patientNavLink{
+            color: $black_link;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .patientNavLink.active{
+            text-decoration: underline $input_active;
+            text-underline-offset: 0.55rem;
+        }
+    }
+
+    .basic{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        column-gap: 5rem;
+
+        form{
+            display: grid;
+            grid-template-columns: 2.5fr 7.5fr;
+            column-gap: 5rem;
+            background: white;
+            padding: 2rem;
+            width: 90%;
+            border-radius: 1rem;
+    
+            > div:first-of-type{
+                row-gap: 2rem;
+                display: flex;
+                flex-direction: column;
+    
+                h2{
+                    font-size: 1.5rem;
+                    width: 100%;
+                }
+    
+                img{
+                    width: 6rem;
+                }
+            }
+    
+            .patientInput{
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                color: $black;  
+    
+                input{
+                    display: inline-block;
+                    margin: 1.2rem auto;
+                    border: none;
+                    padding: 0;
+                    width: 10.5ch;
+                    background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/ 35ch 2px no-repeat;
+                    font: 1.2rem 'Ubuntu Mono', monospace;
+                    letter-spacing: 0.5ch;
+                }
+    
+                input:focus{
+                    border: none !important;
+                    outline: none;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    margin: 0.5rem 0 1.5rem 0;
+                }
+                  
+            }
+    
+            > div:nth-of-type(2){
+                display: flex;
+                column-gap: 3rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        form.noEdits{
+
+            .patientInput{
+                
+                input{
+                    pointer-events: none;
+                }
+            }
+        }
+
+        button{
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    .health-data{
+        margin-top: 1.25rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        grid-template-areas: 
+        "one two tri foe"
+        "fie six sev foe"
+        "eig 0 0 0";
+        row-gap: 2rem;
+        column-gap: 1rem;
+        justify-content: space-between;
+
+        > div:nth-of-type(1){
+            grid-area: one;
+        }
+
+        > div:nth-of-type(2){
+            grid-area: two;
+        }
+
+        > div:nth-of-type(3){
+            grid-area: tri;
+        }
+
+        > div:nth-of-type(4){
+            grid-area: foe;
+        }
+
+        > div:nth-of-type(5){
+            grid-area: fie;
+        }
+
+        > div:nth-of-type(6){
+            grid-area: six;
+        }
+
+        > div:nth-of-type(7){
+            grid-area: sev;
+        }
+
+        > div:nth-of-type(8){
+            grid-area: eig;
+        }
+
+        .health-data-item{
+            background: white;
+            padding: 0.75rem;
+            border-radius: 0.625rem;
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            justify-self: flex-start;
+    
+            h3{
+                display: flex;
+                font-size: 0.95rem;
+                justify-content: space-between;
+                align-items: center;
+                cursor: default;
+            }
+    
+            button{
+                border-radius: 0.25rem;
+                font-size: 0.85rem;
+                color: $black;
+                display: flex;
+                border: none;
+                background: none;
+                column-gap: 0.5rem;
+                align-items: center;
+            }
+    
+            button:hover{
+                cursor: pointer;
+            }
+
+            .items{
+                padding-top: 1.5rem;
+                border-top: solid 1px $gray_border;
+                color: $black;
+            }
+
+            .vitals{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.5rem;
+                color: $black;
+
+                .vital{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+
+                    > p{
+                        font-size: 0.85rem;
+                        color: $input_inactive;
+                    }
+
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        column-gap: 2rem;
+
+                        > p:nth-of-type(1){
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                        }
+
+                        > p:nth-of-type(2){
+                            font-size: 0.75rem;
+                            color: $input_active;
+                            background: $blue_bg;
+                            padding: 0.2rem 0.45rem;
+                            border-radius: 0.35rem;
+                        }
+                    }
+                }
+
+                .vital:not(:nth-of-type(1)){
+                    padding-top: 1.5rem;
+                    border-top: solid 1px $gray_border;
+                }
+            }
+
+            .diagnoses{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                .diagnosis{
+                    color: $black;
+                    font-size: 0.85rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 0.5rem;
+                }
+            }
+
+            .medication-history{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                > div{
+                    font-size: 0.9rem;
+                }
+            }
+
+            .allergies{
+                @extend .medication-history;
+            }
+
+            .family-illnesses{
+                @extend .medication-history;
+            }
+
+            .medical-conditions{
+                @extend .medication-history;
+            }
+
+            .referrals{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+
+                .referral{
+                    display: flex;
+                    row-gap: 0.5rem;
+                    flex-direction: column;
+                    color: $black;
+
+                    p:nth-of-type(1){
+                        font-size: 0.85rem;
+                    }
+
+                    p:nth-of-type(2){
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+
+            .medical-notes{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.5rem;
+
+                .medicalNote{
+                    border: solid 1px $medical_note;
+                    border-radius: 0.5rem;
+                    padding: 0.5rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 2rem;
+    
+                    .top{
+                        display: flex;
+                        column-gap: 1rem;
+                        cursor: pointer;
+    
+                        > div{
+                            font-size: 0.85rem;
+                            color: $black;
+                        }
+                    }
+    
+                    .content.show{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 1rem;
+    
+                        > div{
+                            display: grid;
+                            column-gap: 1rem;
+                            grid-template-columns: 8fr 2fr;
+                            justify-content: space-between;
+    
+                            p{
+                                text-align: justify;
+                                font-size: 0.875rem;
+                                color: $black;
+                            }
+    
+                            .short{
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 1rem;
+                            }
+                        }
+    
+                    }
+    
+                    .content{
+                        display: none;
+                        transition: all ease 100ms;
+                    }
+                }
+
+                .medicalNote.show{
+                    padding: 1rem 2rem;
+                }
+
+                .medicalNote:hover{
+                    border: solid 1px $blue_hover;
+                }
+
+                .medicalNote:active{
+                    border: solid 1px $blue_clicked;
+                }
+            }
+        }
+    }
+}

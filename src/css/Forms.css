@@ -1,0 +1,104 @@
+.addData {
+  z-index: 20;
+  width: 50%;
+  max-height: 45rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+}
+.addData form {
+  width: 100%;
+  background: white;
+  border: solid 1px #EFEFEF;
+  padding-bottom: 3rem;
+  border-radius: 1rem;
+}
+.addData form > div:first-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px #EFEFEF;
+  padding: 2rem 3rem 0.5rem 3rem;
+}
+.addData form > div:first-of-type img {
+  cursor: pointer;
+}
+.addData form .inputCon {
+  border-bottom: solid 1px #EFEFEF;
+  margin: 2rem 2.5rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-bottom: 1rem;
+}
+.addData form .inputCon > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.addData form .inputCon > div label {
+  color: #111F30;
+  font-size: 0.95rem;
+}
+.addData form .inputCon > div input {
+  text-align: right;
+  width: 9rem;
+  padding: 0.45rem 0.5rem 0.45rem 0.5rem;
+}
+.addData form .inputCon > div input::placeholder {
+  text-align: right;
+  color: #C3C0C0;
+  font-size: 0.9rem;
+}
+.addData form .inputCon > div input[value=""]::-webkit-datetime-edit {
+  color: transparent;
+}
+.addData form .inputCon > div input:focus::-webkit-datetime-edit {
+  color: #000;
+}
+.addData form .inputCon h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.25rem 0;
+}
+.addData form .btnDiv {
+  margin: 2rem 3rem 0 3rem;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+}
+.addData form .btnDiv button {
+  width: fit-content;
+}
+
+.familyIllness form div p, .referralNote form div p, .allergy form div p {
+  color: #486FD8;
+  text-decoration: underline #486FD8;
+  text-underline-offset: 0.2rem;
+  padding: 1rem 0 0.5rem 3rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.familyIllness form .inputCon, .referralNote form .inputCon, .allergy form .inputCon {
+  border-bottom: none;
+}
+.familyIllness form .inputCon > div input, .referralNote form .inputCon > div input, .allergy form .inputCon > div input {
+  text-align: left;
+}
+
+.diagnosis form .inputCon {
+  border-bottom: none;
+}
+.diagnosis form .inputCon > div input {
+  text-align: left;
+}
+.diagnosis form .inputCon > div input[type=text] {
+  width: 20rem;
+}
+
+.referralNote form .inputCon > div input[type=text] {
+  width: 20rem;
+}
+
+/*# sourceMappingURL=Forms.css.map */
